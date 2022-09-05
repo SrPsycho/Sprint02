@@ -13,12 +13,20 @@
     </header>
     <main>
         <input type="button" value="Empezar el juego!" class="boton_Inicio">
-        <input type="button" value="Seleccionar la dificultad" class="dificultad">
-        <a href="/palabras.html"><input type="button" value="Agregar nuevas palabras" class="boton_Palabras"></a>
+        <a href="palabras.html"><input type="button" value="Agregar nuevas palabras" class="boton_Palabras"></a>
+        <div class="selectorDificultad">
+            <p><strong>Seleccione la dificultad</strong></p>
+            <ul>
+                <li><input type="button" value="Facil" class="facil" onclick="selectorDif(1)"></li>
+                <li><input type="button" value="Media" class="media" onclick="selectorDif(2)"></li>
+                <li><input type="button" value="Dificil" class="dificil" onclick="selectorDif(3)"></li>
+            </ul>
+            <p class="advertencia"><i>Por favor, solo seleccione una a la vez</i></p>
+        </div>
     </main>
 
     <footer>
-       <p class="datos">© 2022 - Challenge 1 -  Matias Hausen - Grupo 3 Oracle Next Education y Alura Latam</p>
+       <p class="datos">© 2022 - Challenge 2 -  Matias Hausen - Grupo 3 Oracle Next Education y Alura Latam</p>
        <div class="misRedes"> 
             <ul>
                 <li><a href="https://www.instagram.com/mati_hausen/" target="_blank"><i class="fa-brands fa-instagram link"></i></a></li>
