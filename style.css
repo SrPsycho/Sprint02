@@ -1,0 +1,92 @@
+*{
+    background-color: aliceblue;
+}
+main{
+    display: none;
+    
+}
+#btnInicio{
+    cursor: pointer;
+    padding: 24px;
+    font-size: 20px;
+    gap: 8px;
+    position: absolute;
+    color: whitesmoke;
+    left: 40%;
+    top: 50%;
+    width: 20%;
+    background: #0A3871;
+    border-radius: 24px;
+}
+#btnInicio:hover{
+    border: 2px solid blue;
+    background: #165fb9;
+    box-shadow: 0px 15px 20px #062449;
+    transform: translateY(-7px);
+}
+
+#btnInicio:active{
+    transform: translateY(-1px);
+}
+
+.lineas{
+    display: none;
+}
+#inner, span{
+    color: blue;
+    background-color: chartreuse;
+    border-bottom: 5px solid black;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+#zonaLetras{
+    display: none;
+}
+#horca1{
+    display: none;
+}
+
+#selectorDificultad{
+    display: none;
+}
+
+#agregarPalabras{
+    display: none;
+}
+
+#zonaLetrasIncorrectas{
+    display: none;
+}
+
+#victoria{
+    display: none;
+}
+#derrota{
+    display: none;
+}
+
+footer{
+    width: 100%;
+}
+.datos{
+    position: absolute;
+    top: 85%;
+    left: 35%;
+}
+
+.misRedes{
+    color:#0A3871; 
+    position: absolute;
+    top: 87%;
+    display: flex;
+    list-style: none;
+    font-size: 2rem;
+    gap: 50%;
+    left: 45%;
+}
+
+

@@ -10,25 +10,93 @@
 <body>
     <header>
         <img src="/images/Logo.png" alt="logo de alura">
+
+        <input type="button" value="Iniciar" id="btnInicio" onclick="iniciar()">
     </header>
-    <main>
-        <input type="button" value="Empezar el juego!" class="boton_Inicio">
-        <a href="palabras.html"><input type="button" value="Agregar nuevas palabras" class="boton_Palabras"></a>
-        <div class="selectorDificultad">
-            <p><strong>Seleccione la dificultad</strong></p>
+    <main id="main">
+
+        <section class="zonaPersona">
+            <img src="/images/horca/1.png" alt="Horca" id="horca1">
+        </section>
+
+        <section id="zonaTexto">
+        <p id="oculto"></p>
+        <section class="letras">
+                    
+        </section>
+        <section class="lineas">
+            <span class="linea linea-1"></span>
+            <span class="linea linea-2"></span>
+            <span class="linea linea-3"></span>
+            <span class="linea linea-4"></span>
+            <span class="linea linea-5"></span>
+            <span class="linea linea-6"></span>
+            <span class="linea linea-7"></span>
+            <span class="linea linea-8"></span>
+        </section>
+        </section>
+
+        <section id="zonaLetrasIncorrectas">
+            <h2>Letras incorrectas</h2>
+            <input type="text" id="incorrectos">
+        </section>
+
+        <section id="zonaLetras">
+            <input type="text" name="letra" id="letra" placeholder="Ingrese una letra" pattern="^[A-Za-z]+$" maxlength="1" >
+            <input type="button" value="Verificar letra" class="boton_Letra" onclick="ingresoLetra()" >
+        </section>
+
+        <div class="botones2">
+            <input type="button" value="Nuevo Juego" id="nuevoJuego" onclick="eleccionPalabra()">   
+            <a href="index.html"><input type="button" value="Volver" class="renunciar"></a>    
+        </div>
+
+        <section id="popUp">
+            <input type="button" id="pop-up" value="Seleccionar dificultad" onclick="mostrarPopUp(1)">
+            <input type="button" id="pop-up2" value="Agregar mas palabras" onclick="mostrarPopUp(2)">
+        </section>
+
+        <div id="selectorDificultad">
+            <h3>Seleccione la dificultad</h3>
             <ul>
                 <li><input type="button" value="Facil" class="facil" onclick="selectorDif(1)"></li>
                 <li><input type="button" value="Media" class="media" onclick="selectorDif(2)"></li>
                 <li><input type="button" value="Dificil" class="dificil" onclick="selectorDif(3)"></li>
             </ul>
+            <input type="button" value="Cerrar ventana" id="cerrarVentana" onclick="cerrarVentana(1)">
             <p class="advertencia"><i>Por favor, solo seleccione una a la vez</i></p>
         </div>
+
+        <div id="agregarPalabras">
+            <h3>Ingrese mas palabras para jugar!</h3>
+            <input type="text" name="palabra" id="espacio_Palabra" placeholder="Ingrese una palabra">
+            <p class="advertencia">Máx. de 8 letras</p>
+            <div class="botones">
+                <input type="button" value="Guardar palabra" class="agregar" onclick="agregarPalabra()">
+                <input type="button" value="Mostrar palabras actuales" class="mostrar" onclick="mostrarPalabra()">
+                <input type="button" value="Cerrar ventana" id="cerrarVentana" onclick="cerrarVentana(2)">
+            </div>
+        </div>
+
+        <!--Cartel de victorio y derrota  -->
+        <section id="carteles">
+            <div id="victoria">
+                <h2>FELICIDADES,GANASTE!</h2>
+                <a href="index.html"><input type="button" value="Volver a jugar"></a>   
+            </div>
+            <div id="derrota">
+                <h2>Intentalo otra vez</h2>
+                <p>No te rindas!</p>
+                <a href="index.html"><input type="button" value="Volver a jugar"></a>  
+            </div>
+        </section>
+
     </main>
 
     <footer>
        <p class="datos">© 2022 - Challenge 2 -  Matias Hausen - Grupo 3 Oracle Next Education y Alura Latam</p>
        <div class="misRedes"> 
-            <ul>
+            <ul class="misRedes"> 
                 <li><a href="https://www.instagram.com/mati_hausen/" target="_blank"><i class="fa-brands fa-instagram link"></i></a></li>
                 <li><a href="https://github.com/SrPsycho" target="_blank"><i class="fa-brands fa-github link"></i></a></li>
             </ul>
