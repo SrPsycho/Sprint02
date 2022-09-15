@@ -188,22 +188,22 @@ function mostrarGuiones(palabra) {
 function cambiarHorca(fallo){
     switch(fallo){
         case 1:
-            document.getElementById("horca1").src="/images/horca/2.png";
+            document.getElementById("horca1").src="images/horca/2.png";
             break;
         case 2:
-            document.getElementById("horca1").src="/images/horca/3.png";
+            document.getElementById("horca1").src="images/horca/3.png";
             break;
         case 3:
-            document.getElementById("horca1").src="/images/horca/4.png";
+            document.getElementById("horca1").src="images/horca/4.png";
             break;
         case 4:
-            document.getElementById("horca1").src="/images/horca/5.png";
+            document.getElementById("horca1").src="images/horca/5.png";
             break;
         case 5:
-            document.getElementById("horca1").src="/images/horca/6.png";
+            document.getElementById("horca1").src="images/horca/6.png";
             break;
         case 6:
-            document.getElementById("horca1").src="/images/horca/7.png";
+            document.getElementById("horca1").src="images/horca/7.png";
             cartelFinal(2);
             break;
     }
