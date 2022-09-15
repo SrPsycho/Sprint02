@@ -6,7 +6,7 @@ const salida= document.getElementById('oculto');
 var palabrasFaciles=["OGRO","GATO","PERA","TORO","FOCA","PERRO","BOCA"];
 var palabrasMedias=["JUEVES","JIRAFA","ZEBRA","BANANA","PRISA","ZORRO","CAMION"];
 var palabrasDificiles=["CORAZON","ESCOPETA","CABALLO","HOSPITAL","PANDEMIA","HABLANDO"];
-var letrasAbecedario=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","U","V","W","X","Y","Z"];
+var letrasAbecedario=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 const letrasErradas=[];
 
@@ -14,6 +14,7 @@ const letrasErradas=[];
 function iniciar(){
     document.getElementById("main").style.display = "block";
     document.getElementById("btnInicio").style.display = "none";
+    
 }
 
 function mostrarPopUp(pop){
@@ -96,7 +97,6 @@ function mostrarPalabra(){
 }
 
 function eleccionPalabra(){
-    nuevoJuego.disabled = true;
     if (dificultad==1){
         let palabraOculta=palabrasFaciles[Math.floor(Math.random() * palabrasFaciles.length)];
         palabraSecreta=palabraOculta;//.split('');
@@ -113,8 +113,10 @@ function eleccionPalabra(){
     
     document.getElementById("horca1").style.display = "block";
     document.getElementById("popUp").style.display = "none";
+    document.getElementById("nuevoJuego").style.display = "none";
     document.getElementById("zonaLetras").style.display = "block";
     document.getElementById("letra").focus();
+    
     mostrarGuiones(palabraSecreta)
 }
 
@@ -210,9 +212,11 @@ function cambiarHorca(fallo){
 function cartelFinal(opc){
     switch(opc){
         case 1:
+            document.getElementById("overlay").style.display = "block";
             document.getElementById("victoria").style.display="block";
             break;
         case 2:
+            document.getElementById("overlay").style.display = "block";
             document.getElementById("derrota").style.display="block";
             break;
     }

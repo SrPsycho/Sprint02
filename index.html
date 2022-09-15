@@ -3,6 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="stylesheet" href="style.css">
     <title>El Ahorcado</title>
@@ -37,12 +40,12 @@
         </section>
 
         <section id="zonaLetrasIncorrectas">
-            <h2>Letras incorrectas</h2>
+            <h2 class="tituloIncorrectas">Letras incorrectas</h2>
             <input type="text" id="incorrectos">
         </section>
 
         <section id="zonaLetras">
-            <input type="text" name="letra" id="letra" placeholder="Ingrese una letra" pattern="^[A-Za-z]+$" maxlength="1" >
+            <input type="text" name="letra" id="letra" maxlength="1" >
             <input type="button" value="Verificar letra" class="boton_Letra" onclick="ingresoLetra()" >
         </section>
 
@@ -55,40 +58,51 @@
             <input type="button" id="pop-up" value="Seleccionar dificultad" onclick="mostrarPopUp(1)">
             <input type="button" id="pop-up2" value="Agregar mas palabras" onclick="mostrarPopUp(2)">
         </section>
+       
+            <div id="selectorDificultad">
+                <h3 class="tituloDif">Seleccione la dificultad</h3> 
+                <div id="lista">
+                    <ul class="listado">
+                        <li><input type="button" value="Facil" class="btnDif1" onclick="selectorDif(1)"></li>
+                        <li><input type="button" value="Media" class="btnDif2" onclick="selectorDif(2)"></li>
+                        <li><input type="button" value="Dificil" class="btnDif3" onclick="selectorDif(3)"></li>
+                    </ul>
+                </div>
+                
+                <input type="button" value="X" id="cerrarVentana" onclick="cerrarVentana(1)">
+                <p class="advertencia"><i>Por favor, solo seleccione una a la vez</i></p>
+            </div>
 
-        <div id="selectorDificultad">
-            <h3>Seleccione la dificultad</h3>
-            <ul>
-                <li><input type="button" value="Facil" class="facil" onclick="selectorDif(1)"></li>
-                <li><input type="button" value="Media" class="media" onclick="selectorDif(2)"></li>
-                <li><input type="button" value="Dificil" class="dificil" onclick="selectorDif(3)"></li>
-            </ul>
-            <input type="button" value="Cerrar ventana" id="cerrarVentana" onclick="cerrarVentana(1)">
-            <p class="advertencia"><i>Por favor, solo seleccione una a la vez</i></p>
-        </div>
 
         <div id="agregarPalabras">
-            <h3>Ingrese mas palabras para jugar!</h3>
-            <input type="text" name="palabra" id="espacio_Palabra" placeholder="Ingrese una palabra">
-            <p class="advertencia">Máx. de 8 letras</p>
+            <h3 class="tituloIngrese">Ingrese mas palabras para jugar!</h3>
+            <input type="text" name="palabra" id="espacio_Palabra" placeholder="Ingrese una palabra" maxlength="8">
+            <p class="advertencia2">Máx. de 8 letras</p>
             <div class="botones">
                 <input type="button" value="Guardar palabra" class="agregar" onclick="agregarPalabra()">
                 <input type="button" value="Mostrar palabras actuales" class="mostrar" onclick="mostrarPalabra()">
-                <input type="button" value="Cerrar ventana" id="cerrarVentana" onclick="cerrarVentana(2)">
+                <input type="button" value="X" id="cerrarVentana" onclick="cerrarVentana(2)">
             </div>
         </div>
 
+
         <!--Cartel de victorio y derrota  -->
         <section id="carteles">
-            <div id="victoria">
-                <h2>FELICIDADES,GANASTE!</h2>
-                <a href="index.html"><input type="button" value="Volver a jugar"></a>   
+            <div id="overlay">
+                <div id="victoria">
+                    <h2 class="cartelVictoria">FELICIDADES,GANASTE!</h2>
+                    <i class="fa-regular fa-star star"></i>
+                    <a href="index.html"><input type="button" value="Volver a jugar" id="volverAJugar"></a>   
+                </div>
+                <div id="derrota">
+                    <h2 class="cartelDerrota">Intentalo otra vez</h2>
+                    <i class="fa-solid fa-x equis"></i>
+                    <p class="apoyo">No te rindas!</p>
+                    <i class="fa-regular fa-face-sad-sweat sweat"></i>
+                    <a href="index.html"><input type="button" value="Volver a jugar" id="volverAJugar"></a>  
+                </div>
             </div>
-            <div id="derrota">
-                <h2>Intentalo otra vez</h2>
-                <p>No te rindas!</p>
-                <a href="index.html"><input type="button" value="Volver a jugar"></a>  
-            </div>
+           
         </section>
 
     </main>
